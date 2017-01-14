@@ -14,7 +14,7 @@ const ResultsThree = React.createClass({
       
     <div>
 
-    <h1> SEARCH RESULTS THREE </h1>
+    <h1> SEARCH RESULTS COMPONENT THREE </h1>
 
 
     </div>

@@ -15,7 +15,7 @@ const ResultsOne = React.createClass({
     <div>
 
 
-    <h1> SEARCH RESULTS ONE </h1>
+    <h1> SEARCH RESULTS COMPONENT ONE </h1>
 
 
     </div>

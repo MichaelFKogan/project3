@@ -29,6 +29,7 @@ render: function () {
 <div>
 
 
+
 { /* SEARCH BOX INPUT AND MAIN PAGE GO HERE */}
 <h1> SEARCH PAGE</h1>
 
@@ -36,11 +37,9 @@ render: function () {
   <button>Search</button>
 
 
-
 {/* Component 1 */}
     <ResultsOne />
           
-
 
 
 {/* Component 2 */}

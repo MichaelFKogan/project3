@@ -12,14 +12,11 @@ getInitialState: function () {
 
 
 handleChange: function (event) {
-    // const value = event.target.value;
-
 
   },
 
 
 handleSubmit: function (event) {
-    // const value = event.target.value;
 
   },
   
@@ -27,10 +24,15 @@ handleSubmit: function (event) {
 render: function () {
     return (
 
-<div> {/* DO NOT DELETE THIS <div> */}
+<div> {/* <-- DO NOT DELETE THIS DIV */}
 
 
-{ /* LOG IN/SIGN UP PAGE GOES IN HERE */}
+
+
+
+
+
+{ /* LOG IN AND SIGN UP PAGE GOES IN HERE */}
 
 
 <h1> LOGIN PAGE</h1>
@@ -58,7 +60,9 @@ render: function () {
 
 
 
-{/* DO NOT DELETE THIS <div> */} </div>
+
+
+{/* DO NOT DELETE THIS DIV --> */} </div>
 
     );},
 });
