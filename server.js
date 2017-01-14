@@ -12,13 +12,13 @@ var User = require('./models/User.js');
 
 
 // Run Morgan for console.logging GET/POST routes
-// app.use(logger("dev"));
+app.use(logger("dev"));
 
 // Run body-parser to parse POST requests to the server
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({extended: true}));
-// app.use(bodyParser.text());
-// app.use(bodyParser.json({type: "application/vnd.api+json"}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.text());
+app.use(bodyParser.json({type: "application/vnd.api+json"}));
 
 const app = express();
 
@@ -26,7 +26,7 @@ app.set('port', (process.env.PORT || 3001));
 
 // Express only serves static assets in production
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
+  app.use(express.static('client/public'));
 }
 
 
@@ -51,7 +51,6 @@ db.once("open", function() {
 // ===================================================
 app.get("/", function(req, res) {
 
-// Example MongoDB Commands
  res.sendFile(__dirname + "client/public/index.html");
 
 });
