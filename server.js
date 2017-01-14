@@ -12,7 +12,7 @@ var User = require('./models/User.js');
 
 
 // Run Morgan for console.logging GET/POST routes
-app.use(logger("dev"));
+// app.use(logger("dev"));
 
 // Run body-parser to parse POST requests to the server
 app.use(bodyParser.json());
