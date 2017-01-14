@@ -35,16 +35,16 @@ if (process.env.NODE_ENV === 'production') {
 // ===================================================
 // MongoDB Configuration 
 
-mongoose.connect("mongodb://localhost/ProjectThree");
-var db = mongoose.connection;
+// mongoose.connect("mongodb://localhost/ProjectThree");
+// var db = mongoose.connection;
 
-db.on("error", function(err) {
-  console.log("Mongoose Error: ", err);
-});
+// db.on("error", function(err) {
+//   console.log("Mongoose Error: ", err);
+// });
 
-db.once("open", function() {
-  console.log("Mongoose connection successful.");
-});
+// db.once("open", function() {
+//   console.log("Mongoose connection successful.");
+// });
 
 
 // ROUTES
