@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # `create-react-app` with a server example
 
  [![Dolphins](https://cdn.rawgit.com/fullstackio/cq/master/doc/readme/dolphins-badge-ff00ff.svg)](https://www.fullstackreact.com)
@@ -127,3 +128,6 @@ git push heroku master
 ```
 
 Heroku will give you a link at which to view your live app.
+=======
+# project3
+>>>>>>> 3b34196677573d70dc247135e013a5175fc12c80
