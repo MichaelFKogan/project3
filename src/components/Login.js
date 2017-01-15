@@ -34,6 +34,7 @@ render: function () {
 
 { /* LOG IN AND SIGN UP PAGE GOES IN HERE */}
 
+<div className="centerTextInsideDiv">
 
 <h1> LOGIN PAGE</h1>
 
@@ -52,7 +53,7 @@ render: function () {
 
 <p><NavLink to="/Search" className="navLinks">LINK TO SEARCH PAGE</NavLink></p>
 
-
+</div>
 
 { /* LOG IN/SIGN UP PAGE GOES IN HERE */}
 

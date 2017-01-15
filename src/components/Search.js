@@ -43,73 +43,44 @@ handleSubmit: function (event) {
 
 render: function () {
     return (
-<div>
+<div> {/* <-- DO NOT DELETE THIS DIV */}
 
 
 
 { /* SEARCH BOX INPUT AND MAIN PAGE GO HERE */}
-<h1> SEARCH PAGE</h1>
+<div className="centerTextInsideDiv"><h1> Search Page</h1>
 
   Search<input></input>
   <button>Search</button>
 
 
-  <form 
-        onSubmit={this.handleSubmit}
-        className="create-form" 
-        action="/search" 
-        method="GET" 
-        id="searchForm" >
 
-<div id="searchDiv">
-    <span id="searchGlyphicon"> 
-    <img id="searchGlyphiconImg" src="./assets/img/glyphicons-search.png"/>
-    </span>
-        <input 
-        onChange={this.handleChange} 
-        type="text" 
-        className="form-control" 
-        placeholder="Search..." 
-        id="keyword" 
-        name="jobType"
-        autoComplete="off"
-         />
+
+
+    {/* You can pass data from the search component to the results components here */}
+
+
+        {/* Component 1 */}
+            <ResultsOne />
+                  
+
+
+        {/* Component 2 */}
+            <ResultsTwo />
+
+
+
+        {/* Component 2 */}
+            <ResultsThree />    
+
+
     </div>
 
-    <button 
-        className="" 
-        type="submit" 
-        value="Search" 
-        id="searchButton">
-        Search
-    </button>
 
-
-</form>
-
-
-
-
-
-{/* You can pass data from the search component to the results components here */}
-
-
-{/* Component 1 */}
-    <ResultsOne />
-          
-
-
-{/* Component 2 */}
-    <ResultsTwo />
-
-
-
-{/* Component 2 */}
-    <ResultsThree />    
-        
         
 
-        </div>
+
+{/* DO NOT DELETE THIS DIV --> */} </div> 
     );},
 });
 

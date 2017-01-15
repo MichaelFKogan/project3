@@ -12,13 +12,21 @@ const ResultsOne = React.createClass({
   render: function () {
     return (
       
-    <div>
+<div>{/* <-- DO NOT DELETE THIS DIV */}
 
 
-    <h1> SEARCH RESULTS COMPONENT ONE </h1>
+	<div className="centerTextInsideDiv">
+
+		<div className="resultsDiv col-4" id="resultsDivOne">
+
+		    <h1> SEARCH RESULTS COMPONENT ONE </h1>
+
+		</div>
+
+	</div>
 
 
-    </div>
+{/* DO NOT DELETE THIS DIV --> */} </div>
     
    );},
 });
