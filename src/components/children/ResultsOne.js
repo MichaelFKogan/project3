@@ -31,7 +31,9 @@ const ResultsOne = React.createClass({
         {/*x++*/}
 
         <div className="row">
-            <p className="">{search.jobTitle}</p>
+            <p className=""><strong>{search.snippet.title}</strong></p>
+            <p className="">{search.snippet.description}</p>
+            <img src={search.snippet.thumbnails.default.url} />
         
        <button onClick="" className=" btn btn-default btn-xs saveButton">Save</button>
       </div>

@@ -9,31 +9,13 @@ var helper = {
   // This runs our AXIOS/AJAX Requests and pulls the data from the API.
 runQuery: function(keyword) {
 
-{/* EXAMPLE YOUTUBE API CALL
+        {/* YOUTUBE API REQUEST */}
 
-	var queryURL = "https://www.googleapis.com/youtube/v3/videos
-	?id=7lCDEYXw3mM
-	&key=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0
-	&part=snippet,statistics" 
-
-API KEY=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0
-
-     https://www.googleapis.com/youtube/v3/search
-
-     ?part=snippet,statistics
-     &q=" + keyword + "
-     &maxResults=50
-     &order=viewCount
-     &key=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0
-
-*/}
-
-   var queryURL = "https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0&part=snippet,statistics" 
+   var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + keyword + "&maxResults=50&order=viewCount&regionCode=US&relevanceLanguage=en&key=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0" 
         
         return axios.get(queryURL).then(function(response) {
                 if (response) {
-                	console.log(response.data);
-                    return response.data;
+                    return response.data.items;
                 }
               return "";
               
@@ -41,6 +23,13 @@ API KEY=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0
         }); /* END AXIOS.GET */ 
     }, /* END RUNQUERY */ 
 }; /* END HELPER */ 
+
+
+
+
+
+
+
 
 // We export the API helper
 module.exports = helper;

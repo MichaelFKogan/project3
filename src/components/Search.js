@@ -18,7 +18,6 @@ getInitialState: function () {
 handleChange: function (event) {
         switch(event.target.id){
           case "keyword":
-          console.log(event.target.value);
             this.setState({ keyword: event.target.value });
             break;
     }
@@ -35,7 +34,6 @@ handleSubmit: function (event) {
             for(var i=0;i<=data.length-1;i++){
                 results.push(data[i]);
             }
-            console.log(results);        
             this.setState({resultsOne: results});
         }
       }.bind(this)); 
