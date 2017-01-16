@@ -7,14 +7,33 @@ var helper = {
 
 
   // This runs our AXIOS/AJAX Requests and pulls the data from the API.
-runQuery: function(location, keyword) {
+runQuery: function(keyword) {
 
+{/* EXAMPLE YOUTUBE API CALL
 
-   var queryURL = "http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=" 
+	var queryURL = "https://www.googleapis.com/youtube/v3/videos
+	?id=7lCDEYXw3mM
+	&key=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0
+	&part=snippet,statistics" 
+
+API KEY=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0
+
+     https://www.googleapis.com/youtube/v3/search
+
+     ?part=snippet,statistics
+     &q=" + keyword + "
+     &maxResults=50
+     &order=viewCount
+     &key=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0
+
+*/}
+
+   var queryURL = "https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0&part=snippet,statistics" 
         
         return axios.get(queryURL).then(function(response) {
                 if (response) {
-                    return response.data.resultItemList;
+                	console.log(response.data);
+                    return response.data;
                 }
               return "";
               
