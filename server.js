@@ -17,7 +17,7 @@ var mongoose = require("mongoose");
 // var User = require('./models/User.js');
 
 
-var PORT = process.env.PORT || 8080
+var PORT = process.env.PORT || 3000
 
 // using webpack-dev-server and middleware in development environment
 if(process.env.NODE_ENV !== 'production') {
@@ -136,7 +136,7 @@ app.post('/me', bodyParser.json(), stormpath.loginRequired, function (req, res) 
 // });
 
 app.on('stormpath.ready', function () {
-  app.listen(3000, 'localhost', function (err) {
+  app.listen(PORT, 'localhost', function (err) {
     if (err) {
       return console.error(err);
     }
