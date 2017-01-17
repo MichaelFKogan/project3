@@ -1,5 +1,8 @@
 import React from 'react';
 import NavLink from '../utils/NavLink'
+import Home from './Home'
+import { LoginLink } from 'react-stormpath';
+import DocumentTitle from 'react-document-title';
 
 const Login = React.createClass({
   
@@ -36,30 +39,24 @@ render: function () {
 
 <div className="centerTextInsideDiv">
 
-<h1> LOGIN PAGE</h1>
+<h1> HOME PAGE</h1>
 
-
-<h3> Sign Up</h3>
-<div>Name<input></input></div>
-<div>Password<input></input></div>
-<button>Submit</button>
-
-<h3> LOG IN</h3>
-<div>Name<input></input></div>
-<div>Password<input></input></div>
-<button>Submit</button>
-
-<br /> <br />
-
-<p><NavLink to="/Search" className="navLinks">LINK TO SEARCH PAGE</NavLink></p>
-
-</div>
 
 { /* LOG IN/SIGN UP PAGE GOES IN HERE */}
 
 
+      <DocumentTitle title='My React App'>
+        <div className='Login'>
+        {/*  <Home /> */}
+          { this.props.children }
+        </div>
+      </DocumentTitle>
+
+<br/>
+<p><NavLink to="/Search" className="navLinks">LINK TO SEARCH PAGE</NavLink></p>
 
 
+</div>
 
 
 
