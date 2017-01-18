@@ -1,11 +1,11 @@
 import React from 'react';
-import helpers from '../utils/helpers'
+import helpers from './utils/helpers' 
 
 import ResultsOne from './children/ResultsOne';
 import ResultsTwo from './children/ResultsTwo';
 import ResultsThree from './children/ResultsThree';
 
-const app = React.createClass({
+const SearchPage = React.createClass({
   
 
 getInitialState: function () {
@@ -54,8 +54,6 @@ render: function () {
 { /* SEARCH BOX INPUT AND MAIN PAGE GO HERE */}
 <div className="centerTextInsideDiv"><h1> Search Page</h1>
 
-
-
     <form 
         onSubmit={this.handleSubmit} >
 
@@ -75,17 +73,17 @@ render: function () {
 
 
         {/* Component 1 */}
-            <ResultsOne resultsOne={this.state.resultsOne} />
+           <ResultsOne resultsOne={this.state.resultsOne} /> 
                   
 
 
         {/* Component 2 */}
-            <ResultsTwo resultsOne={this.state.resultsOne} />
+           <ResultsTwo resultsOne={this.state.resultsOne} /> 
 
 
 
         {/* Component 2 */}
-            <ResultsThree resultsOne={this.state.resultsOne} />    
+           <ResultsThree resultsOne={this.state.resultsOne} />     
 
 
     </div>
@@ -98,4 +96,4 @@ render: function () {
     );},
 });
 
-export default app;
+export default SearchPage;

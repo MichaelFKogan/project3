@@ -1,4 +1,4 @@
-node_modules/
-*npm-debug.log
-*.DS_Store
-dist/bundle.js
+.DS_Store
+npm-debug.log
+node_modules
+stormpath.yml

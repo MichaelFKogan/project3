@@ -1,21 +1,23 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
-import { UserProfileForm } from 'react-stormpath';
+import { ChangePasswordForm } from 'react-stormpath';
 
-export default class ProfilePage extends React.Component {
+export default class ChangePasswordPage extends React.Component {
   render() {
+    let query = this.props.location.query;
+
     return (
-      <DocumentTitle title={`My Profile`}>
-      <div className="container">
+      <DocumentTitle title={`Change Password`}>
+        <div className="container">
           <div className="row">
             <div className="col-xs-12">
-              <h3>My Profile</h3>
+              <h3>Change Password</h3>
               <hr />
             </div>
           </div>
           <div className="row">
             <div className="col-xs-12">
-              <UserProfileForm />
+              <ChangePasswordForm spToken={query.sptoken} />
             </div>
           </div>
         </div>

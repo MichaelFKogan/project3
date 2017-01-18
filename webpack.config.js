@@ -1,31 +1,22 @@
-var webpack = require('webpack');
+/* eslint-disable no-var */
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
   entry: [
-    './src/index'
+    './src/js/app'
   ],
-  module: {
-    loaders: [
-      { test: /\.js?$/, loader: 'babel', exclude: /node_modules/ },
-      { test: /\.s?css$/, loader: 'style!css!sass' },
-    ]
-  },
-  resolve: {
-    extensions: ['', '.js']
-  },
+  devtool: 'eval-source-map',
   output: {
-    path: path.join(__dirname, '/public'),
-    publicPath: '/',
-    filename: 'bundle.js'
+    path: __dirname,
+    filename: 'app.js',
+    publicPath: '/js/'
   },
-  devServer: {
-    contentBase: './public',
-    hot: true
-  },
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
-  ]
+  module: {
+    loaders: [{
+      test: /\.js$/,
+      loaders: ['babel'],
+      include: path.join(__dirname, 'src/js')
+    }]
+  }
 };
