@@ -10,7 +10,7 @@ export default class RegisterPage extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-xs-12">
-              <h3>Sign Up</h3>
+              <h3>Registration</h3>
               <hr />
             </div>
           </div>
@@ -71,7 +71,7 @@ export default class RegisterPage extends React.Component {
                     <div key="register-button" className="form-group">
                       <div className="col-sm-offset-4 col-sm-4">
                         <p className="alert alert-danger" data-spIf="form.error"><span data-spBind="form.errorMessage" /></p>
-                        <button type="submit" className="btn btn-primary">Sign Up</button>
+                        <button type="submit" className="btn btn-primary">Register</button>
                       </div>
                     </div>
                   </div>
