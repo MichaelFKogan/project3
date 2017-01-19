@@ -30,33 +30,42 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
   <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">iCODE</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Login</a></li>
-  <li><a href="#">Signup</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Signup</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="#">Navbar Link</a></li>
       </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i>
+       <li><a href="/login">Login</a></li>
+        <li><a href="/register">Signup</a></li>
+
+      </a>
     </div>
   </nav>
   <div class="section no-pad-bot" id="index-banner">
+  
     <div class="container">
       <br><br>
-      <h1 class="header center orange-text">Starter Template</h1>
+      <h1 class="header center orange-text">iCODE</h1>
       <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        <h5 class="header col s12 light">A research application for students and developers.</h5>
       </div>
       <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+      <a href="/register" id="download-button" class="btn-large waves-effect waves-light orange">Sign Up</a>
+      <a href="/login" id="download-button" class="btn-large waves-effect waves-light orange">Login</a>
+   
       </div>
-      <br><br>
+
 
     </div>
+   <div id="app-container"></div>
+
   </div>
-    <div id="app-container"></div>
+    
 
 
   <div class="container">
