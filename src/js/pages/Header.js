@@ -7,61 +7,27 @@ export default class Header extends React.Component {
   render() {
     return (
       
+        <nav className="light-blue lighten-1" role="navigation">
+    <div className="nav-wrapper container"><a id="logo-container" href="/" className="brand-logo">iCODE</a>
+      <ul className="right hide-on-med-and-down">
+          <NotAuthenticated>
+                <li><LoginLink />Login</li>
+                <li><Link to="/register" activeClassName="active">Sign Up</Link></li>
 
-      <nav className="navbar navbar-default navbar-static-top">
-        <div className="container">
-          <div className="navbar-header">
-            <button type="button" data-toggle="collapse" data-target="#navbar-collapse" className="navbar-toggle collapsed">
-              <span className="sr-only">Toggle Navigation</span>
-              <span className="icon-bar"></span><span className="icon-bar"></span><span className="icon-bar"></span>
-            </button>
-          </div>
-          
+            </NotAuthenticated>
 
-          <div id="navbar-collapse" className="collapse navbar-collapse">
-            <ul className="nav navbar-nav">
-              
-              <li><Link to="/" activeClassName="active" onlyActiveOnIndex={true}>Home</Link></li>
-              
+             <Authenticated>  
+                <li><Link to="/profile" activeClassName="active">Profile</Link></li>
+                <li><Link to="/search" activeClassName="active">Search</Link></li>
+                <li><LogoutLink /></li>
+          </Authenticated>
+      </ul>
 
-              <Authenticated>  
-                <li>
-                  <Link to="/profile" activeClassName="active">Profile</Link>
-                </li>
-              </Authenticated>
+      
+    </div>
+  </nav>
+  
 
-
-            </ul>
-            <ul className="nav navbar-nav navbar-right">
-              
-
-              <NotAuthenticated>
-                <li>
-                  <LoginLink activeClassName="active" />
-                </li>
-              </NotAuthenticated>
-
-
-              <Authenticated>
-                <li>
-                  <LogoutLink />
-                </li>
-              </Authenticated>
-
-              
-              
-
-              <NotAuthenticated>
-                <li>
-                  <Link to="/register" activeClassName="active">Create Account</Link>
-                </li>
-              </NotAuthenticated>
-
-              
-            </ul>
-          </div>
-        </div>
-      </nav>
     );
   }
 }
