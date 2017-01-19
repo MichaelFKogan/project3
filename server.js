@@ -105,7 +105,7 @@ app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'src/html/index.html'));
 });
 
-spinner.text = 'Starting Dev Sever on port ' + port,
+spinner.text = 'Starting Dev Server on port ' + port,
 spinner.start();
 
 app.on('error', failAndExit);
