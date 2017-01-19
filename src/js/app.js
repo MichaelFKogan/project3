@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { IndexRoute, Route, browserHistory } from 'react-router';
 import ReactStormpath, { Router, HomeRoute, LoginRoute, AuthenticatedRoute } from 'react-stormpath';
 import { ChangePasswordPage, MasterPage, IndexPage, LoginPage, RegisterPage, ResetPasswordPage, VerifyEmailPage, ProfilePage, SearchPage } from './pages';
+import { LoginLink, LogoutLink, NotAuthenticated, Authenticated } from 'react-stormpath';
 
 import ResultsOne from './pages/children/ResultsOne';
 import ResultsTwo from './pages/children/ResultsTwo';
@@ -33,9 +34,8 @@ ReactDOM.render(
             <Route path="/ResultsOne" component={ResultsOne}/> 
             <Route path="/ResultsTwo" component={ResultsTwo}/> 
             <Route path="/ResultsThree" component={ResultsThree}/> 
-    
-
         <Route path='/profile' component={ProfilePage} />
+        <Route path='/' component={LoginPage} />
 
       </AuthenticatedRoute>
 
