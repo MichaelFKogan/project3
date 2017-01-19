@@ -11,6 +11,7 @@ export default class MasterPage extends React.Component {
       <DocumentTitle title='iCode'>
         <div className='MasterPage'>
           <Header />
+         
           { this.props.children }
         </div>
       </DocumentTitle>
