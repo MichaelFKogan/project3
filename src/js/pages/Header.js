@@ -13,13 +13,13 @@ export default class Header extends React.Component {
           <NotAuthenticated>
                 <li><LoginLink />Login</li>
                 <li><Link to="/register" activeClassName="active">Sign Up</Link></li>
-
+<li><Link to="/profile" activeClassName="active">Edit Profile</Link></li>
+                <li><Link to="/search" activeClassName="active">Search</Link></li>
+                <li><LogoutLink /></li>
             </NotAuthenticated>
 
              <Authenticated>  
-                <li><Link to="/profile" activeClassName="active">Edit Profile</Link></li>
-                <li><Link to="/search" activeClassName="active">Search</Link></li>
-                <li><LogoutLink /></li>
+                
           </Authenticated>
       </ul>
 
