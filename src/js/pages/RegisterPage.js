@@ -10,7 +10,7 @@ export default class RegisterPage extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-xs-12">
-              <h3>Registration</h3>
+              <h3>Sign Up</h3>
               <hr />
             </div>
           </div>
