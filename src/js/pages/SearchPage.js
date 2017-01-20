@@ -27,6 +27,7 @@ handleChange: function (event) {
 handleSubmit: function (event) {
         event.preventDefault();
         var results = [];
+        var resultsTwo = [];
 
 // QUERY the APIs here through the helpers file
     helpers.runQuery(this.state.keyword).then(function(data){
@@ -39,7 +40,18 @@ handleSubmit: function (event) {
       }.bind(this)); 
 
 
-      this.setState({results: [] });
+// QUERY the APIs here through the helpers file
+    helpers.runQueryTwo(this.state.keyword).then(function(data){
+        if (data !== this.state.results){
+            for(var i=0;i<=data.length-1;i++){
+                resultsTwo.push(data[i]);
+            }
+            this.setState({resultsTwo: resultsTwo});
+        }
+      }.bind(this)); 
+
+
+      this.setState({results: [], resultsOne: [], resultsTwo:[] });
       this.setState({ keyword: ""});
 
   },
@@ -78,12 +90,12 @@ render: function () {
 
 
         {/* Component 2 */}
-           <ResultsTwo resultsOne={this.state.resultsOne} /> 
+           <ResultsTwo resultsTwo={this.state.resultsTwo} /> 
 
 
 
         {/* Component 2 */}
-           <ResultsThree resultsOne={this.state.resultsOne} />     
+           <ResultsThree resultsThree={this.state.resultsThree} />     
 
 
     </div>
