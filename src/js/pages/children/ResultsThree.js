@@ -16,15 +16,38 @@ const ResultsThree = React.createClass({
 
 
 
-	<div className="centerTextInsideDiv">
+<div className="centerTextInsideDiv">
 
-		<div className="resultsDiv col-4" id="resultsDivThree">
+    <div className="resultsDiv col-4" id="resultsDivThree">
 
-		    <h1> SEARCH RESULTS COMPONENT THREE </h1>
+        <h1> SEARCH RESULTS COMPONENT THREE </h1>
 
-		</div>
 
-	</div>
+
+            {this.props.resultsThree.map(function(search, i) {
+    return (
+
+    <div key={i}>
+
+        {/*x++*/}
+
+        <div className="row">
+            <p className=""><strong><a href={search.formattedUrl}>{search.title}</a></strong></p>
+            <p className="">{search.snippet}</p>
+        
+       <button onClick="" className=" btn btn-default btn-xs saveButton">Save</button>
+      </div>
+            <hr className="hrResults"/>
+
+    </div>
+
+)})}
+
+
+
+    </div>
+
+  </div>
 
 
 

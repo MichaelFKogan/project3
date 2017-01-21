@@ -28,6 +28,8 @@ handleSubmit: function (event) {
         event.preventDefault();
         var results = [];
         var resultsTwo = [];
+        var resultsThree = [];
+
 
 // QUERY the APIs here through the helpers file
     helpers.runQuery(this.state.keyword).then(function(data){
@@ -50,8 +52,18 @@ handleSubmit: function (event) {
         }
       }.bind(this)); 
 
+    // QUERY the APIs here through the helpers file
+    helpers.runQueryThree(this.state.keyword).then(function(data){
+        if (data !== this.state.results){
+            for(var i=0;i<=data.length-1;i++){
+                resultsThree.push(data[i]);
+            }
+            this.setState({resultsThree: resultsThree});
+        }
+      }.bind(this)); 
 
-      this.setState({results: [], resultsOne: [], resultsTwo:[] });
+
+      this.setState({results: [], resultsOne: [], resultsTwo:[], resultsThree:[] });
       this.setState({ keyword: ""});
 
   },
