@@ -9,11 +9,13 @@ var helper = {
   // This runs our AXIOS/AJAX Requests and pulls the data from the API.
 runQuery: function(keyword) {
 
+
         {/* YOUTUBE API REQUEST */}
 
    var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + keyword + "&maxResults=50&order=viewCount&regionCode=US&relevanceLanguage=en&key=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0" 
         
-        return axios.get(queryURL).then(function(response) {
+        return axios.get(queryURL)
+        .then(function(response) {
                 if (response) {
                     return response.data.items;
                 }
@@ -22,9 +24,38 @@ runQuery: function(keyword) {
 
         }); /* END AXIOS.GET */ 
     }, /* END RUNQUERY */ 
-}; /* END HELPER */ 
 
-
+// This will return any saved searches from our database
+  getSearches: function() {
+    return axios.get("/api/searches")
+      .then(function(results) {
+        console.log("axios results", results);
+        return results;
+      });
+  },
+  // This will save new searches to our database
+  postSearches: function(keyword, results) {
+    var newSearch = { keyword: keyword, results: results};
+    return axios.post("/api/searches", newSearch)
+      .then(function(response) {
+        console.log("axios results", response.data._id);
+        return response.data._id;
+      });
+  },
+  // This will remove saved articles from our database
+  deleteSearches: function(keyword, results) {
+    return axios.delete("/api/searches", {
+      params: {
+        "keyword": keyword,
+        "results": results
+      }
+    })
+    .then(function(results) {
+      console.log("axios results", results);
+      return results;
+    });
+  }
+};
 
 
 

@@ -42,11 +42,6 @@ handleSubmit: function (event) {
       this.setState({results: [] });
       this.setState({ keyword: ""});
 
-  //save the keyword & results to searches.js in mongo
-///***ENTER CODE HERE******//////
-
-
-
   },
   
 

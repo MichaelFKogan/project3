@@ -25,13 +25,15 @@ ReactDOM.render(
       <Route path='/register' component={RegisterPage} />
       <Route path='/change' component={ChangePasswordPage} />
       <Route path='/forgot' component={ResetPasswordPage} />
+      
+{/*move these pages to authenticated when ready*/}
       <Route path='/Search' component={SearchPage} />
        <Route path="/ResultsOne" component={ResultsOne}/> 
         <Route path="/ResultsTwo" component={ResultsTwo}/> 
       <Route path="/ResultsThree" component={ResultsThree}/> 
-    
-
-        <Route path='/profile' component={ProfilePage} />
+    <Route path ="/Saved" component={Saved}/>
+    <Route path="/RecentSearches" component{RecentSearches}/>
+<Route path='/profile' component={ProfilePage} />
         {/* THESE PAGES BELOW ARE ONLY FOR SIGNED IN USERS */}
       <AuthenticatedRoute>
         

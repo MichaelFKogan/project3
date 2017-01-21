@@ -2,19 +2,22 @@ var stormpath = require('express-stormpath');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var path = require('path');
-var express = require('express');
 var webpack = require('webpack');
 var config = require('./webpack.config');
 var ora = require('ora');
 
-var port = process.env.PORT || 3000;
+var mongoose = require("mongoose");
 
-var app = express();
+var port = process.env.PORT || 3000; //port
+
+var express = require('express');
+var app = express(); //instant of express
+
 var compiler = webpack(config);
-
 var spinner = ora({
   interval: 100
 });
+
 
 function failAndExit(err) {
   spinner.fail();
@@ -22,7 +25,9 @@ function failAndExit(err) {
   process.exit(1);
 }
 
+//run morgan for logging
 app.use(morgan('combined'));
+
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
@@ -101,9 +106,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 //   }
 // });
 
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'src/html/index.html'));
-});
+
 
 // spinner.text = 'Starting Dev Server on port ' + port,
 // spinner.start();
@@ -123,8 +126,27 @@ app.get('*', function (req, res) {
 //   });
 // });
 
+//mongoDB Configuration
+mongoose.connect("mongodb://localhost:iCode");
+var db = mongoose.connection;
+
+db.on("error", function(err) {
+  console.log("Mongoose Error: ", err);
+});
+
+db.once("open", function() {
+  console.log("Mongoose connection successful.");
+});
+////-----------
 
 
+// Any non API GET routes will be directed to our React App and handled by React Router
+
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'src/html/index.html'));
+});
+
+////------------------------------
 app.listen(port, function() {
   console.log('Server running at localhost:' + port)
 })

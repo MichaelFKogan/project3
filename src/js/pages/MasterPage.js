@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react';
 import DocumentTitle from 'react-document-title';
 
 import Header from './Header';
+import SearchPage from './SearchPage';
 import { LoginLink } from 'react-stormpath';
 
 export default class MasterPage extends React.Component {
@@ -11,7 +12,7 @@ export default class MasterPage extends React.Component {
       <DocumentTitle title='iCode'>
         <div className='MasterPage'>
           <Header />
-         
+         <SearchPage/>
           { this.props.children }
         </div>
       </DocumentTitle>
