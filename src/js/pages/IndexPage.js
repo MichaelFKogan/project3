@@ -4,6 +4,11 @@ import DocumentTitle from 'react-document-title';
 import { Authenticated, NotAuthenticated, LoginLink } from 'react-stormpath';
 import Header from './Header';
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import DrawerUnlockedExample from './DrawerUnlockedExample';
+injectTapEventPlugin();
+
 export default class IndexPage extends React.Component {
   
   // FIRST PAGE/WELCOME PAGE - LOGIN, CREATE ACCOUNT, ETC. 
@@ -13,6 +18,13 @@ export default class IndexPage extends React.Component {
       <div>
         <div className="section no-pad-bot" id="index-banner">
           <div className="container">
+          
+          <MuiThemeProvider>
+
+            <DrawerUnlockedExample />
+
+          </MuiThemeProvider>
+
             <br /><br />
             <h1 className="header center orange-text">iCODE</h1>
             <div className="row center">

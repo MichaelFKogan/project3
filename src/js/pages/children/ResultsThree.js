@@ -32,8 +32,7 @@ const ResultsThree = React.createClass({
         {/*x++*/}
 
         <div className="row">
-            <p className=""><strong><a href={search.formattedUrl}>{search.title}</a></strong></p>
-            <p className="">{search.snippet}</p>
+            <p className=""><strong><a href={search.clone_url}>{search.description}</a></strong></p>
         
        <button onClick="" className=" btn btn-default btn-xs saveButton">Save</button>
       </div>

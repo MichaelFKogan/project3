@@ -56,7 +56,7 @@ runQueryThree: function(keyword) {
 
    // var queryURL = "https://www.google.com/search?q=" + keyword + "" 
 
-   var queryURL = "https://github.com/search?&q=react"+keyword+""
+   var queryURL = "https://api.github.com/search/repositories?q="+keyword+""
         
         return axios.get(queryURL).then(function(response) {
                 if (response) {
