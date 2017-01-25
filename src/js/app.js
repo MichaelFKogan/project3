@@ -8,6 +8,8 @@ import ResultsOne from './pages/children/ResultsOne';
 import ResultsTwo from './pages/children/ResultsTwo';
 import ResultsThree from './pages/children/ResultsThree';
 
+
+
 ReactStormpath.init();
 
 
@@ -20,6 +22,7 @@ ReactDOM.render(
     <HomeRoute path='/' component={MasterPage}>
       <IndexRoute component={IndexPage} />
       <LoginRoute path='/login' component={LoginPage} />
+
 
       <Route path='/verify' component={VerifyEmailPage} />
       <Route path='/register' component={RegisterPage} />
