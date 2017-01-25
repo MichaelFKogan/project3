@@ -4,17 +4,17 @@ import DocumentTitle from 'react-document-title';
 import { Authenticated, NotAuthenticated, LoginLink } from 'react-stormpath';
 import Header from './Header';
 
-import Background from './pages/background.jpg'
+// import Background from './pages/background.jpg'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import DrawerUnlockedExample from './DrawerUnlockedExample';
 injectTapEventPlugin();
 
-const divStyle = {
-  color: 'blue',
-  // backgroundImage: 'url('+ Background +')',
-};
+// const divStyle = {
+//   color: 'blue',
+//   // backgroundImage: 'url('+ Background +')',
+// };
 
 
 
@@ -24,7 +24,7 @@ export default class IndexPage extends React.Component {
 
   render() {
     return (
-      <div style={divStyle} >
+      <div >
 
         <div className="section no-pad-bot" id="index-banner">
           <div className="container" id="home">
