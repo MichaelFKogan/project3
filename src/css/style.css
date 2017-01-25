@@ -6,6 +6,7 @@ body, html, main {
     padding: 0px;
     overflow-x: hidden;
     /*background-image: url('../img/background.jpg');*/
+    background-image: url('./background.jpg');
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -46,6 +47,10 @@ text-align:center;
 
 .resultsDiv{
 
+}
+
+#home{
+        background-image: url('background.jpg');
 }
 
 
