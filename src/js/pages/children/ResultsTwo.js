@@ -17,38 +17,43 @@ const ResultsTwo = React.createClass({
 
 
 
-<div className="centerTextInsideDiv">
 
-    <div className="resultsDiv col-4" id="resultsDivTwo">
+                    {/* ========== GITHUB SECTION ============= */}
 
-        <h1> SEARCH RESULTS COMPONENT TWO </h1>
-
-
-
-            {this.props.resultsTwo.map(function(search, i) {
-    return (
-
-    <div key={i}>
-
-        {/*x++*/}
-
+    <div className="section" id="rowNine" >
         <div className="row">
-            <p className=""><strong><a href={search.formattedUrl}>{search.title}</a></strong></p>
-            <p className="">{search.snippet}</p>
-        
-       <button onClick="" className=" btn btn-default btn-xs saveButton">Save</button>
-      </div>
-            <hr className="hrResults"/>
+            <div className="col l5 s12 center" id="rowTen">
+                <h1 className="lime-text text-accent-4" id="rowEleven">Github</h1>
+            </div>
+            <div className="col l7 s12 blue lighten-3" id="rowTwelve">
+                <div className="card red lighten-3">
+                    <div className="row">
+                        <div className="col l11 s11 card-content white-text center">
 
+
+                            {this.props.resultsTwo.map(function(search, i) {
+                            return (
+                            <div key={i}>                        
+
+                            <span className="card-title">
+
+                            <a href={search.clone_url}>{search.description}</a></span>
+                            <p></p>
+                            <hr />                            
+
+                            </div> )})}
+
+
+                        </div>
+                        <div className="col l1 s1 card-action center">
+                            <a href="#"><i className="material-icons">grade</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-)})}
-
-
-
-    </div>
-
-  </div>
 
 
 

@@ -81,7 +81,7 @@ render: function () {
 
 
 
-{ /* SEARCH BOX INPUT AND MAIN PAGE GO HERE */}
+{ /* SEARCH BOX INPUT AND MAIN PAGE GO HERE 
 
 
 <div className="centerTextInsideDiv"><h1> Search Page</h1>
@@ -96,7 +96,7 @@ render: function () {
     </form>
 
 
-
+*/}
 
 
 
@@ -104,13 +104,13 @@ render: function () {
 
 
     {/* You can pass data from the search component to the results components here */}
-        {/* Component 1 */}
-           <ResultsOne resultsOne={this.state.resultsOne} />                   
-        {/* Component 2 */}
+        {/* Component 1 
+           <ResultsOne resultsOne={this.state.resultsOne} />   */}                
+        {/* Component 2 
            <ResultsTwo resultsTwo={this.state.resultsTwo} /> 
-        {/* Component 2 */}
+        {/* Component 2 
            <ResultsThree resultsThree={this.state.resultsThree} />     
-    </div>
+    </div> */}
 
 
         

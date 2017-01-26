@@ -1,8 +1,74 @@
 import React from 'react';
+import ResultsOne from './ResultsOne';
+import ResultsTwo from './ResultsTwo';
+import ResultsThree from './ResultsThree';
+import helpers from '../utils/helpers' 
 
 const SearchPageSunny = React.createClass({
 
-  
+
+
+getInitialState: function () {
+    return {
+     keyword: "", resultsOne: [], resultsTwo: [], resultsThree: [],
+    };
+  },
+
+
+handleChange: function (event) {
+        switch(event.target.id){
+          case "keyword":
+            this.setState({ keyword: event.target.value });
+            break;
+    }
+  },
+
+
+handleSubmit: function (event) {
+        event.preventDefault();
+        var results = [];
+        var resultsTwo = [];
+        var resultsThree = [];
+
+
+// QUERY the APIs here through the helpers file
+    helpers.runQuery(this.state.keyword).then(function(data){
+        if (data !== this.state.results){
+            for(var i=0;i<=data.length-1;i++){
+                results.push(data[i]);
+            }
+            this.setState({resultsOne: results});
+        }
+      }.bind(this)); 
+
+
+// QUERY the APIs here through the helpers file
+    helpers.runQueryTwo(this.state.keyword).then(function(data){
+        if (data !== this.state.results){
+            for(var i=0;i<=data.length-1;i++){
+                resultsTwo.push(data[i]);
+            }
+            this.setState({resultsTwo: resultsTwo});
+        }
+      }.bind(this)); 
+
+    // QUERY the APIs here through the helpers file
+    helpers.runQueryThree(this.state.keyword).then(function(data){
+        if (data !== this.state.results){
+            for(var i=0;i<=data.length-1;i++){
+                resultsThree.push(data[i]);
+            }
+            this.setState({resultsThree: resultsThree});
+        }
+      }.bind(this)); 
+
+
+      this.setState({results: [], resultsOne: [], resultsTwo:[], resultsThree:[] });
+      this.setState({ keyword: ""});
+
+  },
+
+
   render: function () {
     return (
       
@@ -12,6 +78,7 @@ const SearchPageSunny = React.createClass({
 
 
 <div id="main">
+
     
                 {/* ========== SEARCH BAR ============= */}
     <div className="searchPage" id="rowZero">
@@ -20,14 +87,15 @@ const SearchPageSunny = React.createClass({
         </div>
         <div className="row white center" id="rowThree">
             <div className="nav-wrapper "> 
-                <form>
+                <form onSubmit={this.handleSubmit} >
                     <div className="input-field ">
-                        <input id="search" type="search" placeholder="Search..." required />
+                        <input onChange={this.handleChange} id="keyword" type="search" placeholder="Search..." required />
                             <label htmlFor="search">
                                 <i className="material-icons">search</i> 
                             </label>
                         <i className="material-icons" id="closeIcon">close</i>
                     </div>
+                    <button type="submit"> Search </button>
                 </form>
             </div>
         </div>  
@@ -36,108 +104,13 @@ const SearchPageSunny = React.createClass({
 
 
 
+<ResultsOne resultsOne={this.state.resultsOne} /> 
 
-                    {/* ========== YOUTUBE SECTION ============= */}
-<div className="whiteSpace"></div>
-    <div className="section" id="sectionYouTube">
-        <div className="row" id="rowFour">
+<ResultsTwo resultsTwo={this.state.resultsTwo} /> 
 
-                <div className="col l7 s12 blue lighten-3" id="rowFive">  
-                    <div className="row" id="rowSix" >      
-                        <div className="col l6 s12 center">
-                            <div className="card blue-grey lighten-2">
-                                <div className="card-content white-text">
-                                    <span className="card-title">Github</span>
-                                    <p>blablablabldasfjksfb a.sbasjb,asbc,sdnfd,janawjf, bkbkhvkgv,sa,dknfakdssfds, afjasfnksf, fkkfbauks, udkafaks, efseafaw, efjfawef
-                                    </p>
-                                </div>
-                                <div className="card-action">
-                                    <a href="#">
-                                    <i className="material-icons">grade</i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div className="col l5 s12 center" id="rowSeven">
-                    <h1 className="red-text text-lighten-1" id="rowEight" >YouTube</h1>
-                </div>
-        </div> {/* <-- END <div className="row" id="rowFour"> */}
-    </div> {/* <-- END <div className="section"> */}
-
-<div className="whiteSpace"></div>
-                    {/* ========== GITHUB SECTION ============= */}
-
-    <div className="section" id="rowNine" >
-        <div className="row">
-            <div className="col l5 s12 center" id="rowTen">
-                <h1 className="lime-text text-accent-4" id="rowEleven">Github</h1>
-            </div>
-            <div className="col l7 s12 blue lighten-3" id="rowTwelve">
-                <div className="card red lighten-3">
-                    <div className="row">
-                        <div className="col l11 s11 card-content white-text center">
-                            <span className="card-title">Github</span>
-                            <p>blablablabldasfjksfb a.sbasjb,asbc,sdnfd,janawjf, bkbkhvkgv,sa,dknfakdssfds, afjasfnksf, fkkfbauks, udkafaks, efseafaw, efjfawef
-                            </p>
-                        </div>
-                        <div className="col l1 s1 card-action center">
-                            <a href="#"><i className="material-icons">grade</i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<ResultsThree resultsThree={this.state.resultsThree} /> 
 
 
-
-                    {/* ========== GOOGLE SECTION ============= */}
-
-<div className="whiteSpace"></div>
-
-    <div className="section" id="rowThirteen" >
-        <div className="row">
-            
-            <div className="col l7 s12 blue lighten-3" id="rowFourteen" >
-                <div className="row" id="rowFifteen" > 
-                    <div className="col l6 s12 center">
-                        <div className="card blue-grey lighten-2">
-                            <div className="card-content white-text">
-                                <span className="card-title">Github</span>
-                                <p>blablablabldasfjksfb a.sbasjb,asbc,sdnfd,janawjf, bkbkhvkgv,sa,dknfakdssfds, afjasfnksf, fkkfbauks, udkafaks, efseafaw, efjfawef
-                                </p>
-                            </div>
-                            <div class="card-action">
-                                <a href="#"><i className="material-icons">grade</i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col l6 s12 center">
-                        <div className="card blue-grey lighten-2">
-                            <div className="card-content white-text">
-                                <span className="card-title">Github</span>
-                                <p>blablablabldasfjksfb a.sbasjb,asbc,sdnfd,janawjf, bkbkhvkgv,sa,dknfakd, ssfdsfanhfkjasdk, ufasfbks, fsjfjs, fndsa,fadnfa,fnajksjdfkasdb,f 
-                                </p>
-                            </div>
-                            <div className="card-action">
-                                <a href="#"><i className="material-icons">grade</i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                <div className="col l5 s12 center" id="rowSixteen" >
-                  <h1 className="red-text text-lighten-1" id="rowSeventeen" >Google</h1>
-                </div>
-
-        </div>
-    </div>
-<div className="whiteSpace"></div>
 
 
 

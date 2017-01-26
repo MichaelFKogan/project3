@@ -16,37 +16,53 @@ const ResultsThree = React.createClass({
 
 
 
-<div className="centerTextInsideDiv">
-
-    <div className="resultsDiv col-4" id="resultsDivThree">
-
-        <h1> SEARCH RESULTS COMPONENT THREE </h1>
 
 
+                    {/* ========== GOOGLE SECTION ============= */}
 
-            {this.props.resultsThree.map(function(search, i) {
-    return (
+<div className="whiteSpace"></div>
 
-    <div key={i}>
-
-        {/*x++*/}
-
+    <div className="section" id="rowThirteen" >
         <div className="row">
-            <p className=""><strong><a href={search.clone_url}>{search.description}</a></strong></p>
-        
-       <button onClick="" className=" btn btn-default btn-xs saveButton">Save</button>
-      </div>
-            <hr className="hrResults"/>
+            
+            <div className="col l7 s12 blue lighten-3" id="rowFourteen" >
+                <div className="row" id="rowFifteen" > 
+                    
+                    <div className="col l6 s12 center">
+                        <div className="card blue-grey lighten-2">
+                            <div className="card-content white-text">
 
+
+                                {this.props.resultsThree.map(function(search, i) {
+                                return (
+                                <div key={i}>
+
+                                <span className="card-title">
+
+                                <a href={search.formattedUrl}>{search.title}</a></span>
+                                <p>{search.snippet}</p>
+                                <hr/>
+
+                                </div>)})}
+
+                            </div>
+                            <div className="card-action">
+                                <a href="#"><i className="material-icons">grade</i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+                <div className="col l5 s12 center" id="rowSixteen" >
+                  <h1 className="red-text text-lighten-1" id="rowSeventeen" >Google</h1>
+                </div>
+
+        </div>
     </div>
-
-)})}
-
-
-
-    </div>
-
-  </div>
+<div className="whiteSpace"></div>
 
 
 

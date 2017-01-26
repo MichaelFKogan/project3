@@ -19,35 +19,49 @@ const ResultsOne = React.createClass({
 
 
 
-	<div className="centerTextInsideDiv">
+                    {/* ========== YOUTUBE SECTION ============= */}
+<div className="whiteSpace"></div>
+    <div className="section" id="sectionYouTube">
+        <div className="row" id="rowFour">
 
-		<div className="resultsDiv col-4" id="resultsDivOne">
+                <div className="col l7 s12 blue lighten-3" id="rowFive">  
+                    <div className="row" id="rowSix" >      
+                        <div className="col l6 s12 center">
+                            <div className="card blue-grey lighten-2">
+                                <div className="card-content white-text">
+                                    
+                                    {this.props.resultsOne.map(function(search, i) {
+                                    return (
+                                    <div key={i}>                                
 
-		    <h1> SEARCH RESULTS COMPONENT ONE </h1>
+                                    <span className="card-title">{search.snippet.title}</span>
+                                    <p>{search.snippet.description}</p>
+                                    <p><img src={search.snippet.thumbnails.default.url} /></p>
+                                    <hr/>
+                                    </div> )})}
 
-      {this.props.resultsOne.map(function(search, i) {
-    return (
+                                </div>
+                                <div className="card-action">
+                                    <a href="#">
+                                    <i className="material-icons">grade</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div className="col l5 s12 center" id="rowSeven">
+                    <h1 className="red-text text-lighten-1" id="rowEight" >YouTube</h1>
+                </div>
+        </div> {/* <-- END <div className="row" id="rowFour"> */}
+    </div> {/* <-- END <div className="section"> */}
 
-    <div key={i}>
+<div className="whiteSpace"></div>
 
-        {/*x++*/}
 
-        <div className="row">
-            <p className=""><strong>{search.snippet.title}</strong></p>
-            <p className="">{search.snippet.description}</p>
-            <img src={search.snippet.thumbnails.default.url} />
-        
-       <button onClick="" className=" btn btn-default btn-xs saveButton">Save</button>
-      </div>
-            <hr className="hrResults"/>
 
-    </div>
 
-)})}
-
-		</div>
-
-	</div>
 
 
 {/* DO NOT DELETE THIS DIV --> */} </div>
