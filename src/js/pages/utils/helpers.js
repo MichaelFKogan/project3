@@ -11,7 +11,7 @@ runQuery: function(keyword) {
 
         {/* YOUTUBE API REQUEST */}
 
-   var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + keyword + "&maxResults=50&order=viewCount&regionCode=US&relevanceLanguage=en&key=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0" 
+   var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=Learn" + keyword + "&maxResults=50&order=viewCount&regionCode=US&relevanceLanguage=en&key=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0" 
         
         return axios.get(queryURL).then(function(response) {
                 if (response) {
@@ -26,7 +26,6 @@ runQuery: function(keyword) {
     }, /* END RUNQUERY */ 
 
 
-
   // This runs our AXIOS/AJAX Requests and pulls the data from the API.
 runQueryTwo: function(keyword) {
 
@@ -34,7 +33,30 @@ runQueryTwo: function(keyword) {
 
    // var queryURL = "https://www.google.com/search?q=" + keyword + "" 
 
-   var queryURL = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0&cx=017576662512468239146:omuauf_lfve&q="+keyword+""
+   var queryURL = "https://api.github.com/search/repositories?q="+keyword+"Tutorial"
+        
+        return axios.get(queryURL).then(function(response) {
+                if (response) {
+                  console.log("GITHUB SEARCH RESULTS BELOW: Object.data.items[] ");
+    console.log(response);
+                    return response.data.items;
+                }
+              return "";
+              
+
+        }); /* END AXIOS.GET */ 
+    }, /* END RUNQUERY */ 
+
+    
+
+  // This runs our AXIOS/AJAX Requests and pulls the data from the API.
+runQueryThree: function(keyword) {
+
+        {/* GOOGLE API REQUEST */}
+
+   // var queryURL = "https://www.google.com/search?q=" + keyword + "" 
+
+   var queryURL = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCjLHLmUo8kTzrJeh8WYzyyFOTMRDgOwg0&cx=017576662512468239146:omuauf_lfve&q=Learn"+keyword+"Online"
         
         return axios.get(queryURL).then(function(response) {
                 if (response) {
@@ -48,27 +70,6 @@ runQueryTwo: function(keyword) {
         }); /* END AXIOS.GET */ 
     }, /* END RUNQUERY */ 
 
-
-  // This runs our AXIOS/AJAX Requests and pulls the data from the API.
-runQueryThree: function(keyword) {
-
-        {/* GOOGLE API REQUEST */}
-
-   // var queryURL = "https://www.google.com/search?q=" + keyword + "" 
-
-   var queryURL = "https://api.github.com/search/repositories?q="+keyword+""
-        
-        return axios.get(queryURL).then(function(response) {
-                if (response) {
-                  console.log("GITHUB SEARCH RESULTS BELOW: Object.data.items[] ");
-    console.log(response);
-                    return response.data.items;
-                }
-              return "";
-              
-
-        }); /* END AXIOS.GET */ 
-    }, /* END RUNQUERY */ 
 
 
 }; /* END HELPER */ 
