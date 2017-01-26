@@ -47,6 +47,30 @@ runQueryTwo: function(keyword) {
 
         }); /* END AXIOS.GET */ 
     }, /* END RUNQUERY */ 
+
+
+  // This runs our AXIOS/AJAX Requests and pulls the data from the API.
+runQueryThree: function(keyword) {
+
+        {/* GOOGLE API REQUEST */}
+
+   // var queryURL = "https://www.google.com/search?q=" + keyword + "" 
+
+   var queryURL = "https://api.github.com/search/repositories?q="+keyword+""
+        
+        return axios.get(queryURL).then(function(response) {
+                if (response) {
+                  console.log("GITHUB SEARCH RESULTS BELOW: Object.data.items[] ");
+    console.log(response);
+                    return response.data.items;
+                }
+              return "";
+              
+
+        }); /* END AXIOS.GET */ 
+    }, /* END RUNQUERY */ 
+
+
 }; /* END HELPER */ 
 
 

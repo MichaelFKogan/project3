@@ -4,6 +4,7 @@ import helpers from './utils/helpers'
 import ResultsOne from './children/ResultsOne';
 import ResultsTwo from './children/ResultsTwo';
 import ResultsThree from './children/ResultsThree';
+import SearchPageSunny from './children/SearchPageSunny';
 
 const SearchPage = React.createClass({
   
@@ -28,6 +29,8 @@ handleSubmit: function (event) {
         event.preventDefault();
         var results = [];
         var resultsTwo = [];
+        var resultsThree = [];
+
 
 // QUERY the APIs here through the helpers file
     helpers.runQuery(this.state.keyword).then(function(data){
@@ -50,8 +53,18 @@ handleSubmit: function (event) {
         }
       }.bind(this)); 
 
+    // QUERY the APIs here through the helpers file
+    helpers.runQueryThree(this.state.keyword).then(function(data){
+        if (data !== this.state.results){
+            for(var i=0;i<=data.length-1;i++){
+                resultsThree.push(data[i]);
+            }
+            this.setState({resultsThree: resultsThree});
+        }
+      }.bind(this)); 
 
-      this.setState({results: [], resultsOne: [], resultsTwo:[] });
+
+      this.setState({results: [], resultsOne: [], resultsTwo:[], resultsThree:[] });
       this.setState({ keyword: ""});
 
   },
@@ -63,41 +76,40 @@ render: function () {
 
 
 
-{ /* SEARCH BOX INPUT AND MAIN PAGE GO HERE */}
-<div className="centerTextInsideDiv"><h1> Search Page</h1>
+<SearchPageSunny resultsOne={this.state.resultsOne} />   
 
+
+
+
+{ /* SEARCH BOX INPUT AND MAIN PAGE GO HERE */}
+
+
+<div className="centerTextInsideDiv"><h1> Search Page</h1>
     <form 
         onSubmit={this.handleSubmit} >
-
         <input 
             onChange={this.handleChange} 
             id="keyword" 
             placeholder="Search..." >
         </input>
-
         <button type="submit"> Search </button>
-
     </form>
 
 
 
+
+
+
+
+
+
     {/* You can pass data from the search component to the results components here */}
-
-
         {/* Component 1 */}
-           <ResultsOne resultsOne={this.state.resultsOne} /> 
-                  
-
-
+           <ResultsOne resultsOne={this.state.resultsOne} />                   
         {/* Component 2 */}
            <ResultsTwo resultsTwo={this.state.resultsTwo} /> 
-
-
-
         {/* Component 2 */}
            <ResultsThree resultsThree={this.state.resultsThree} />     
-
-
     </div>
 
 

@@ -15,15 +15,17 @@ const ResultsOne = React.createClass({
 <div>{/* <-- DO NOT DELETE THIS DIV */}
 
 
+
+
+
+
 	<div className="centerTextInsideDiv">
 
 		<div className="resultsDiv col-4" id="resultsDivOne">
 
 		    <h1> SEARCH RESULTS COMPONENT ONE </h1>
 
-
-
-            {this.props.resultsOne.map(function(search, i) {
+      {this.props.resultsOne.map(function(search, i) {
     return (
 
     <div key={i}>
@@ -42,8 +44,6 @@ const ResultsOne = React.createClass({
     </div>
 
 )})}
-
-
 
 		</div>
 
