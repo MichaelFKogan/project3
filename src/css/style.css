@@ -5,8 +5,7 @@ body, html, main {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    /*background-image: url('../img/background.jpg');*/
-    background-image: url('./background.jpg');
+/*    background-image: url('./background.png');*/
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -14,43 +13,246 @@ body, html, main {
 *{
   box-sizing: border-box;
 }
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
+
+/* ================= INDEX PAGE ========================*/
+
+#index-banner{
+        background-image: url('./background.png');
+        background-size:cover;
+        background-position: center center;
+        padding-top:0px;
+        
 }
-[class*="col-"] {
-    float: left;
-    padding: 15px;
+.whiteCover{
+    background: rgba(255, 255, 255, .90);
+    height:auto;
 }
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+#footer{
+    margin:0px;
+}
 
 
-.container{
-    width:100%;
+
+/*
+ .oooooo..o                                        oooo        
+d8P'    `Y8                                        `888        
+Y88bo.       .ooooo.   .oooo.   oooo d8b  .ooooo.   888 .oo.   
+ `"Y8888o.  d88' `88b `P  )88b  `888""8P d88' `"Y8  888P"Y88b  
+     `"Y88b 888ooo888  .oP"888   888     888        888   888  
+oo     .d8P 888    .o d8(  888   888     888   .o8  888   888  
+8""88888P'  `Y8bod8P' `Y888""8o d888b    `Y8bod8P' o888o o888o 
+                                                             
+ooooooooo.                                                     
+`888   `Y88.                                                   
+ 888   .d88'  .oooo.    .oooooooo  .ooooo.                     
+ 888ooo88P'  `P  )88b  888' `88b  d88' `88b                    
+ 888          .oP"888  888   888  888ooo888                    
+ 888         d8(  888  `88bod8P'  888    .o                    
+o888o        `Y888""8o `8oooooo.  `Y8bod8P'                    
+                       d"     YD                               
+                       "Y88888P'                                                                                            
+*/
+
+/*============================================================*/
+
+
+/*=========== MIKE - Took Sunny's Inline Styles from her search page, and put them into css below =============*/
+#headerLogo{
+    width: 70px; 
+    height: 60px;
+}
+#rowZero{
+    background-image:url('./b1.jpg');
+    background-repeat:no-repeat; 
+    background-attachment:fixed;
+    height:600px; 
+    padding-top: 10px;
+}
+#rowOne{ 
+    height: 200px;
+}    
+h1{
+    font-family: 'Bungee Shade', cursive; 
+    padding-top: 70px; 
+    font-size: 85px;
+}
+#rowThree{
+    width: 650px; 
+    opacity: 0.5; 
+    border-top-left-radius: 2em; 
+    border-top-right-radius: 2em; 
+    border-bottom-right-radius: 2em; 
+    border-radius:2em;
+    height:auto;
+    /*padding-top:1px;*/
+    max-height:43px;
+}
+#search{
+    margin-left: auto; 
+    margin-right: auto;
     display:inline-block;
+    border-radius:2em;
+    border:0px;
 }
-.centerTextInsideDiv{
-text-align:center;
+#closeIcon{
+    padding-top:7px;
+}
+.whiteSpace{
+    height:15px;
+    background:white;
+}
+#rowFour{
+    height: 600px; 
+    margin-bottom: 0px;
+}
+#sectionYouTube{
+padding:0px;
+}
+#rowFive{
+    height: 600px; 
+    overflow: scroll;
+}
+#rowSix{
+    height: 290px;
+}
+#rowSeven{
+    background-image:url('./b4.jpg'); 
+    background-repeat:no-repeat; 
+    background-attachment:fixed; 
+    height:600px; 
+    background-size:cover; 
+    background-position: center center;
+}
+#rowEight{
+    font-family: 'Pacifico', cursive; 
+    padding-top: 220px;
+}
+#rowNine{
+    height: 600px; 
+    padding-top: 0px;
+}
+#rowTen{
+    background-image:url('./b5.jpg'); 
+    background-repeat:no-repeat; background-attachment:fixed; 
+    height:600px; 
+    background-size:cover; 
+    background-position: center center;
+}
+#rowEleven{
+    font-family: 'VT323', monospace; 
+    padding-top: 220px; 
+    font-size: 90px;
+}
+#rowTwelve{
+    height: 600px; 
+    overflow: scroll;
+}
+#rowThirteen{
+    height: 600px; 
+    padding:0px;
+}
+#rowFourteen{
+    height: 600px; 
+    overflow: scroll;
+}
+#rowFifteen{
+    height: 290px;
+}
+#rowSixteen{
+    background-image:url('./b4.jpg'); 
+    background-repeat:no-repeat; background-attachment:fixed; 
+    height:600px; 
+    background-size:cover; background-position: 
+    center center;"
+}
+#rowSeventeen{
+    font-family: 'Pacifico', cursive; 
+    padding-top: 220px;
 }
 
-.resultsDiv{
 
+/*============== FROM SUNNY'S style.css page BELOW ===================*/
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-#home{
-        background-image: url('background.jpg');
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
 }
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 0px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+
+/*Search Page*/
+#searchWord {
+    color: #827717
+}
+
+.section {
+    padding-top: 0px;
+}
+
+.card {
+    border-radius: 15px;
+}
+
+/*The original stuff*/
+.icon-block {
+  padding: 0 0px;
+}
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+
+
+
+
+
+
+
+
 
 

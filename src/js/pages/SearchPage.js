@@ -4,6 +4,7 @@ import helpers from './utils/helpers'
 import ResultsOne from './children/ResultsOne';
 import ResultsTwo from './children/ResultsTwo';
 import ResultsThree from './children/ResultsThree';
+import SearchPageSunny from './children/SearchPageSunny';
 
 const SearchPage = React.createClass({
   
@@ -75,41 +76,40 @@ render: function () {
 
 
 
-{ /* SEARCH BOX INPUT AND MAIN PAGE GO HERE */}
-<div className="centerTextInsideDiv"><h1> Search Page</h1>
+<SearchPageSunny resultsOne={this.state.resultsOne} />   
 
+
+
+
+{ /* SEARCH BOX INPUT AND MAIN PAGE GO HERE */}
+
+
+<div className="centerTextInsideDiv"><h1> Search Page</h1>
     <form 
         onSubmit={this.handleSubmit} >
-
         <input 
             onChange={this.handleChange} 
             id="keyword" 
             placeholder="Search..." >
         </input>
-
         <button type="submit"> Search </button>
-
     </form>
 
 
 
+
+
+
+
+
+
     {/* You can pass data from the search component to the results components here */}
-
-
         {/* Component 1 */}
-           <ResultsOne resultsOne={this.state.resultsOne} /> 
-                  
-
-
+           <ResultsOne resultsOne={this.state.resultsOne} />                   
         {/* Component 2 */}
            <ResultsTwo resultsTwo={this.state.resultsTwo} /> 
-
-
-
         {/* Component 2 */}
            <ResultsThree resultsThree={this.state.resultsThree} />     
-
-
     </div>
 
 

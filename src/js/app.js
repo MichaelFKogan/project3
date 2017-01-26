@@ -7,6 +7,7 @@ import { ChangePasswordPage, MasterPage, IndexPage, LoginPage, RegisterPage, Res
 import ResultsOne from './pages/children/ResultsOne';
 import ResultsTwo from './pages/children/ResultsTwo';
 import ResultsThree from './pages/children/ResultsThree';
+import SearchPageSunny from './pages/children/SearchPageSunny';
 
 ReactStormpath.init();
 
@@ -26,9 +27,11 @@ ReactDOM.render(
       <Route path='/change' component={ChangePasswordPage} />
       <Route path='/forgot' component={ResetPasswordPage} />
       <Route path='/Search' component={SearchPage} />
-       <Route path="/ResultsOne" component={ResultsOne}/> 
-        <Route path="/ResultsTwo" component={ResultsTwo}/> 
-      <Route path="/ResultsThree" component={ResultsThree}/> 
+
+      <Route path="/ResultsOne" component={ResultsOne}/> 
+      <Route path="/ResultsTwo" component={ResultsTwo}/> 
+      <Route path="/ResultsThree" component={ResultsThree}/>
+      <Route path="/SearchPageSunny" component={SearchPageSunny}/>  
     
 
         <Route path='/profile' component={ProfilePage} />
