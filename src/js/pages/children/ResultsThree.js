@@ -28,7 +28,7 @@ const ResultsThree = React.createClass({
             <div className="col l7 s12 blue lighten-3" id="rowFourteen" >
                 <div className="row" id="rowFifteen" > 
                     
-                    <div className="col l6 s12 center">
+                    <div className="col l12 s12 center">
                         <div className="card blue-grey lighten-2">
                             <div className="card-content white-text">
 

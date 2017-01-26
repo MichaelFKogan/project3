@@ -38,7 +38,7 @@ const ResultsTwo = React.createClass({
                             <span className="card-title">
 
                             <a href={search.clone_url}>{search.description}</a></span>
-                            <p></p>
+                            <p><a href={search.clone_url}>{search.clone_url}</a></p>
                             <hr />                            
 
                             </div> )})}
