@@ -2,6 +2,7 @@ import React from 'react';
 import ResultsOne from './ResultsOne';
 import ResultsTwo from './ResultsTwo';
 import ResultsThree from './ResultsThree';
+import Footer from './Footer';
 import helpers from '../utils/helpers' 
 
 const SearchPageSunny = React.createClass({
@@ -110,7 +111,7 @@ handleSubmit: function (event) {
 
 <ResultsThree resultsThree={this.state.resultsThree} /> 
 
-
+<Footer />
 
 
 
