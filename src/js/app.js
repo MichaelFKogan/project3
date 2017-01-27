@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { IndexRoute, Route, browserHistory } from 'react-router';
 import ReactStormpath, { Router, HomeRoute, LoginRoute, AuthenticatedRoute } from 'react-stormpath';
-import { ChangePasswordPage, MasterPage, IndexPage, LoginPage, RegisterPage, ResetPasswordPage, VerifyEmailPage, ProfilePage, SearchPage } from './pages';
+import { ChangePasswordPage, MasterPage, IndexPage, LoginPage, RegisterPage, ResetPasswordPage, VerifyEmailPage, ProfilePage, SearchPage, Header, DrawerUndockedExample, DrawerUndockedExample2  } from './pages';
 
 import ResultsOne from './pages/children/ResultsOne';
 import ResultsTwo from './pages/children/ResultsTwo';
@@ -26,19 +26,22 @@ ReactDOM.render(
       <Route path='/register' component={RegisterPage} />
       <Route path='/change' component={ChangePasswordPage} />
       <Route path='/forgot' component={ResetPasswordPage} />
-      <Route path='/Search' component={SearchPage} />
 
-      <Route path="/ResultsOne" component={ResultsOne}/> 
-      <Route path="/ResultsTwo" component={ResultsTwo}/> 
-      <Route path="/ResultsThree" component={ResultsThree}/>
-      <Route path="/SearchPageSunny" component={SearchPageSunny}/>  
     
 
         <Route path='/profile' component={ProfilePage} />
+
+
         {/* THESE PAGES BELOW ARE ONLY FOR SIGNED IN USERS */}
       <AuthenticatedRoute>
         
-        
+      <Route path='/Search' component={SearchPage} />
+
+      <Route path="/SearchPageSunny" component={SearchPageSunny} >  
+      <Route path="/ResultsOne" component={ResultsOne}/> 
+      <Route path="/ResultsTwo" component={ResultsTwo}/> 
+      <Route path="/ResultsThree" component={ResultsThree}/>
+      </Route>  
 
       </AuthenticatedRoute>
 

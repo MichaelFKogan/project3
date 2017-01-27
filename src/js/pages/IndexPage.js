@@ -37,17 +37,17 @@ export default class IndexPage extends React.Component {
             <div className="row center">
 
 
-        <MuiThemeProvider> 
+       <MuiThemeProvider> 
 
-        <DrawerUndockedExample />  
+       <DrawerUndockedExample />  
         
         </MuiThemeProvider>
         &nbsp;
         <MuiThemeProvider> 
 
-        <DrawerUndockedExample2 />  
+       <DrawerUndockedExample2 />  
 
-        </MuiThemeProvider>
+        </MuiThemeProvider>    
 
             </div>
             <br /><br />
