@@ -32,6 +32,7 @@ handleSubmit: function (event) {
         var resultsThree = [];
 
 
+
 // QUERY the APIs here through the helpers file
     helpers.runQuery(this.state.keyword).then(function(data){
         if (data !== this.state.results){
@@ -88,7 +89,7 @@ handleSubmit: function (event) {
         </div>
         <div className="row white center" id="rowThree">
             <div className="nav-wrapper "> 
-                <form onSubmit={this.handleSubmit} >
+                <form onSubmit={this.handleSubmit} action="/search" method="POST"  >
                     <div className="input-field ">
                         <input onChange={this.handleChange} id="keyword" type="search" placeholder="Search..." required />
                             <label htmlFor="search">

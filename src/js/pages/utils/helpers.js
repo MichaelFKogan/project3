@@ -29,7 +29,7 @@ runQuery: function(keyword) {
   // This runs our AXIOS/AJAX Requests and pulls the data from the API.
 runQueryTwo: function(keyword) {
 
-        {/* GOOGLE API REQUEST */}
+        {/* GITHUB API REQUEST */}
 
    // var queryURL = "https://www.google.com/search?q=" + keyword + "" 
 
@@ -48,7 +48,7 @@ runQueryTwo: function(keyword) {
     }, /* END RUNQUERY */ 
 
     
-
+    
   // This runs our AXIOS/AJAX Requests and pulls the data from the API.
 runQueryThree: function(keyword) {
 
@@ -67,7 +67,7 @@ runQueryThree: function(keyword) {
               return "";
               
 
-        }); /* END AXIOS.GET */ 
+        }); /* END AXIOS.GET  */
     }, /* END RUNQUERY */ 
 
 

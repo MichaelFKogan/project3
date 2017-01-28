@@ -32,7 +32,7 @@ const ResultsThree = React.createClass({
                         <div className="card blue-grey lighten-2">
                             <div className="card-content white-text">
 
-
+                            {/*
                                 {this.props.resultsThree.map(function(search, i) {
                                 return (
                                 <div key={i}>
@@ -44,6 +44,9 @@ const ResultsThree = React.createClass({
                                 <hr/>
 
                                 </div>)})}
+{{{markup}}}
+                            */}
+                            
 
                             </div>
                             <div className="card-action">

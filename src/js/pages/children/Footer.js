@@ -21,14 +21,14 @@ const Footer = React.createClass({
            <div className="row">
              <div className="col l6 s12">
                <h5 className="white-text">Team Bio</h5>
-               <p className="grey-text text-lighten-4">We are a team of coding bootcamp students working on this team project based on our learning materials and passion for coding. Any suggestions would help us make this project better, and are greatly appreciated.</p>
+               <p className="grey-text text-lighten-4">We are a team of Rutgers students with a passion for coding. Any suggestions that would help make this project better are greatly appreciated.</p>
 
              </div>
              <div className="col l3 s12">
                <h5 className="white-text">Settings</h5>
                <ul>
                  <li><a className="white-text"> Thank you for </a></li>
-                 <li><a className="blue-text" href="https://codingbootcamp.rutgers.edu/">Rutgers Coding Bootcamp</a>. </li>
+                 <li><a className="blue-text" href="https://codingbootcamp.rutgers.edu/">Rutgers Full-Stack Flex Program</a>. </li>
                </ul>
              </div>
              <div className="col l3 s12">
