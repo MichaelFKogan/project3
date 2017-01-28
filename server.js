@@ -7,17 +7,9 @@ var webpack = require('webpack');
 var config = require('./webpack.config');
 var ora = require('ora');
 
-var request = require('request');
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
-
-var app = express()
-
-app.use(bodyParser.urlencoded({extended: false}));
-
-
 var port = process.env.PORT || 3000;
 
+var app = express()
 var compiler = webpack(config);
 
 var spinner = ora({
