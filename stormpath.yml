@@ -1,11 +1,17 @@
 # HEROKU
 client:
-  apiKey: XZ0HV0RNK8LL7ZDKAJEMCNGAX
-    id: 648oAcqVypuxGCHzAg3qNr
-    secret: SunZgQkm9Wn7b7d/oaAfIu617N0Lyqx7sB/W4m1yUag
+  apiKey:
+    id: 6DUJMFDPXLV2IVOS8X14PGQ3S
+    secret: mSblo3t3ih4A9uR+g4R72uucaCq2gICBGRyNXiWRkms
 application: 
   href: https://api.stormpath.com/v1/applications/648oAcqVypuxGCHzAg3qNr
 
+# STORMPATH_CLIENT_APIKEY_ID= XZ0HV0RNK8LL7ZDKAJEMCNGAX
+# export STORMPATH_CLIENT_APIKEY_SECRET= SunZgQkm9Wn7b7d/oaAfIu617N0Lyqx7sB/W4m1yUag
+# export STORMPATH_APPLICATION_HREF= https://api.stormpath.com/v1/applications/648oAcqVypuxGCHzAg3qNr
+
+# apiKey.id = 6DUJMFDPXLV2IVOS8X14PGQ3S
+# apiKey.secret = mSblo3t3ih4A9uR+g4R72uucaCq2gICBGRyNXiWRkms
 
 #   client:
 #   apiKey:
@@ -13,8 +19,6 @@ application:
 #     secret: vyh7frQytAfLODvP1w//mmyF2O4ACH4la3tu06Ftxjg
 # application: 
 #   href: https://api.stormpath.com/v1/applications/78coQVzgY8uhJNL1xzbH0b
-
-
 
 
 # LOCAL HOST
