@@ -27,12 +27,12 @@ const Footer = React.createClass({
              <div className="col l3 s12">
                <h5 className="white-text">Settings</h5>
                <ul>
-                 <li><a className="white-text"> Thank you for </a></li>
+                 <li><a className="white-text"> Thank you to </a></li>
                  <li><a className="blue-text" href="https://codingbootcamp.rutgers.edu/">Rutgers Full-Stack Flex Program</a>. </li>
                </ul>
              </div>
              <div className="col l3 s12">
-               <h5 className="white-text">Connect Us</h5>
+               <h5 className="white-text">Connect With Us</h5>
                <ul>
                  <li><a className="white-text" href="https://www.linkedin.com/in/harika-kasireddy">Harika Kasireddy</a></li>
                  <li><a className="white-text" href="https://www.linkedin.com/in/michaelfkogan">Mike Kogan</a></li>            

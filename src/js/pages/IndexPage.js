@@ -99,7 +99,7 @@ export default class IndexPage extends React.Component {
               <div className="col l3 s12">
                 <h5 className="white-text">Settings</h5>
                 <ul>
-  <li><a className="white-text"> Thank you for </a></li>
+  <li><a className="white-text"> Thank you to </a></li>
                  <li><a className="blue-text" href="https://codingbootcamp.rutgers.edu/">Rutgers Full-Stack Flex Program</a>. </li>
                 </ul>
               </div>
